@@ -46,6 +46,6 @@ var server = app.listen(8081, function () {
 
 app.get('/', function (req, res) {
     console.log("Got a GET request for the homepage");
-    const userCount = 10;
+    const userCount = Math.ceil(Math.random() * 100);
     res.send(`Hello GET. Users are: ${userCount}`);
  })
